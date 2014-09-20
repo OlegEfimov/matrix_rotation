@@ -163,7 +163,7 @@ int _tmain(int argc, _TCHAR* argv[])
         printf("\nЗаполнение массива\n");
 
         for (size_t i=0; i<size*size; ++i){
-            int tmp777 = *(ptr_rawdata + i) = i;
+            *(ptr_rawdata + i) = i;
             cout << *(ptr_rawdata + i) << "  ";
             }
         cout << endl;
