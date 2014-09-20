@@ -1,4 +1,6 @@
 /Release/
+*.gitignore
+*.suo
 /Debug/
 /ipch/
 /matrix_rotation.vcxproj.user
