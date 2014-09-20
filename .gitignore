@@ -1,5 +1,6 @@
 /Release/
 /Debug/
+/ipch/
 /matrix_rotation.vcxproj.user
 *.opensdf
 /matrix_rotation.sdf
