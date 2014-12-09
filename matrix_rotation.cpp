@@ -19,7 +19,7 @@ namespace matrix_rotation_test {
 
     void DoTest(element_type *data, size_t size) {
 
-        array_proxy<element_type, index_normal<element_type> > arr_normal = make_array_proxy<element_type, index_normal<element_type> >(data, size);
+        array_proxy<element_type, index_normal<element_type> > arr_normal(data, size);
         printf("\nNormal:\n\n");
         print_array<element_type, index_normal<element_type> >( arr_normal, size);
 
@@ -29,10 +29,10 @@ namespace matrix_rotation_test {
         //printf("\nNormal filled through proxy indexes:\n\n");
         //print_array<element_type, index_normal<element_type> >( arr_normal, size);
 
-        array_proxy<element_type, index_rot90<element_type> >  arr_rot90  = make_array_proxy<element_type, index_rot90<element_type> >(data, size);
-        array_proxy<element_type, index_rot180<element_type> > arr_rot180 = make_array_proxy<element_type, index_rot180<element_type> >(data, size);
-        array_proxy<element_type, index_rot270<element_type> > arr_rot270 = make_array_proxy<element_type, index_rot270<element_type> >(data, size);
-        array_proxy<element_type, index_transpose<element_type> > arr_transpose = make_array_proxy<element_type, index_transpose<element_type> >(data, size);
+        array_proxy<element_type, index_rot90<element_type> >  arr_rot90(data, size);
+        array_proxy<element_type, index_rot180<element_type> > arr_rot180(data, size);
+        array_proxy<element_type, index_rot270<element_type> > arr_rot270(data, size);
+        array_proxy<element_type, index_transpose<element_type> > arr_transpose(data, size);
 
         printf("\nMatrix rotated on 90 degrees:\n\n");
         print_array<element_type, index_rot90<element_type> >( arr_rot90, size);

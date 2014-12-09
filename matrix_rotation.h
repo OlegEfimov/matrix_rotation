@@ -66,12 +66,6 @@ private:
     };
 
 template <typename T, typename I>
-array_proxy<T,I> make_array_proxy(T *base, size_t size)
-    {
-    return array_proxy<T,I>(base, size);
-    };
-
-template <typename T, typename I>
 void write_array(array_proxy<T,I>  &ar, size_t size)
     {
     for (size_t i=0; i<size; ++i){
