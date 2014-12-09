@@ -1,40 +1,46 @@
-========================================================================
-    CONSOLE APPLICATION : matrix_rotation Project Overview
-========================================================================
+This code was inspired by a question from "CRACKING THE CODING INTERVIEW, FIFTH EDITION" Gayle Laakmann McDowell
+/page 73/
+1.6 Given an image represented by an NxN matrix, where each pixel in the image is
+4 bytes, write a method to rotate the image by 90 degrees. Can you do this in
+place?
+/Author's solution on page 173/
 
-AppWizard has created this matrix_rotation application for you.
+Class matrix_rotation::array_proxy is not a solution as well as above. (It's just for fun, and to do fingers be quick)
 
-This file contains a summary of what you will find in each of the files that
-make up your matrix_rotation application.
+There is also provided a set of index policy classes for raw array for 2d matrix rotation. It implements normal 2d indexing semantics.
 
+Constructor's complexity: Constant
 
-matrix_rotation.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard.
-    It contains information about the version of Visual C++ that generated the file, and
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
+Screenshot of class matrix_rotation::array_proxy test:
+>matrix_rotation.exe
+Enter matrix size NxN (0 - exit): 4
 
-matrix_rotation.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
-
-matrix_rotation.cpp
-    This is the main application source file.
-
-/////////////////////////////////////////////////////////////////////////////
-Other standard files:
-
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named matrix_rotation.pch and a precompiled types file named StdAfx.obj.
-
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
-
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
-
-/////////////////////////////////////////////////////////////////////////////
+Filling array by increment data
+0  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15
+Normal:
+     0     1     2     3
+     4     5     6     7
+     8     9    10    11
+    12    13    14    15
+Matrix rotated on 90 degrees:
+    12     8     4     0
+    13     9     5     1
+    14    10     6     2
+    15    11     7     3
+Matrix rotated on 180 degrees:
+    15    14    13    12
+    11    10     9     8
+     7     6     5     4
+     3     2     1     0
+Matrix rotated on 270 degrees:
+     3     7    11    15
+     2     6    10    14
+     1     5     9    13
+     0     4     8    12
+Transpose matrix:
+     0     4     8    12
+     1     5     9    13
+     2     6    10    14
+     3     7    11    15
+Enter matrix size NxN (0 - exit): 0
+>
